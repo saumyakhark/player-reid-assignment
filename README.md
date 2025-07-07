@@ -1,17 +1,22 @@
-# player-reid-assignment
-🎬 Player Re-Identification in Single-Camera Sports Feed
-This project is part of the internship assignment for Liat.ai.
-The goal is to solve the player re-identification problem in a single sports video feed, ensuring that each player maintains a consistent ID even when leaving and re-entering the frame.
-The solution simulates real-time processing on a 15-second sports video using modern detection and tracking techniques.
+# Player Re-Identification in Single Feed
 
-🧩 Approach
-🔍 Detection: YOLOv11 (fine-tuned for player & ball detection) — provided best.pt weights.
+This project solves the re-identification problem for players in a single-camera sports feed.
 
-🚶 Tracking & Re-Identification: DeepSORT tracker, which assigns and maintains IDs based on appearance and motion cues.
+## 🎯 Objective
+- Detect players in a 15-second sports video.
+- Assign consistent player IDs even when they leave and re-enter the frame.
+- Simulate real-time tracking and re-identification.
 
-🖼️ Outputs an annotated video (output.mp4) with bounding boxes and consistent player IDs.
+## 🧩 Approach
+- Used YOLOv11 (`best.pt`) for player detection.
+- Used DeepSORT tracker for real-time tracking and re-identification.
 
-📥 Data & Weights
-✅ YOLOv11 weights: best.pt — download and place in the root directory.
+## 📄 Files
+- `main.py` — script to run detection and tracking.
+- `best.pt` — YOLOv11 model weights (provided).
+- `output.mp4` — generated output video.
 
-❌ Input video (15sec_input_720p.mp4) is expected but not included in the provided materials — please contact the company to obtain it.
+## ▶️ How to Run
+### 1️⃣ Install dependencies:
+```bash
+pip install -r requirements.txt
